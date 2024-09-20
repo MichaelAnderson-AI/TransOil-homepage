@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.bg-home {
+  background-image: url(../assets/home.png);
+}
+
+.parallax {
+  /* The image used */
+  background-image: url(../assets/petrolstation.png);
+
+  /* Full height */
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+
+}
+
+.vertical-timeline-element-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+.vertical-timeline-element-content p {
+  margin-top: 0 !important;
+}
+
+.mask {
+background-color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: rgb(32, 27, 27);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 3px;
+  background-color: rgb(255, 255, 255);
+}
